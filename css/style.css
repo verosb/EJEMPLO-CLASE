@@ -1,3 +1,13 @@
 body{
-    background-color: blueviolet;
+    background-color: rgb(202, 164, 240);
 }
+h1{
+    text-align: left;
+   
+}
+tr:hover{
+    background-color: rgb(69, 165, 182);
+   
+}
+
+thead{border: violet;}
