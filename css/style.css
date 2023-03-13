@@ -11,3 +11,37 @@ tr:hover{
 }
 
 thead{border: violet;}
+
+/* estilo por etiqueta */
+input,textarea{
+    border: 1px solid brown;
+    border-radius: 3px;
+    background-color: rgb(123, 189, 107);
+
+
+
+}
+
+
+/* estilo por id*/
+
+#nombre{
+    border: 1px solid brown;
+    border-radius: 3px;
+    background-color: rgb(123, 189, 107);
+
+
+
+}
+ 
+/* estilo por clase */
+.input_class{
+    border: 1px solid brown;
+    border-radius: 3px;
+    background-color: rgb(123, 189, 107);
+
+
+
+}
+
+
