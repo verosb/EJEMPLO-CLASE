@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cambiar_fondo{
+            background-color: beige;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #000;
+            text-transform: uppercase;
+
+        }
+        #cambiar_fondo:hover{
+            background-color: aquamarine;
+            transition: all ease-in 0.6s;
+            box-shadow: 0 0 10px gray;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>VERÓNICA</h1>
+<input type="text" id="variable">
+<button onclick="funcion()" id="evento">CALCULAR</button>
+<h1 id="titulo"></h1>
+<span id="cambiar_fondo">CAMBIAR FONDO</span>
+<!-- ARCHIVOS JAVASCRIPT -->
+<script>
+//VARIABLES
+
+const nameuno = "Cualquier cosa: texto, numero. objeto, array";
+var name_dos = "Cualquier cosa: texto, numero. objeto, array"; 
+let nameTres = "Cualquier cosa: texto, numero. objeto, array";
+//alert(nameuno);
+console.log(name_dos);
+console.log(nameTres);
+
+//TIPOS DE DATOS
+
+let num_a = 5; //Número entero
+let num_b =10.2; //Número decimal
+let boolean = false; // o true
+let stringvar = "Hola, soy un String";
+let arraynum = [1,2,3,4,5, "7", "8", "9"];
+let dias_Semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+//Array multidimensionales
+let users =[
+    {name: "Verónica", last_name:"Sánchez", age:19},
+    {name: "Santiago", last_name:"Beleño", age:20},
+    {name: "Lola", last_name:"Pérez", age:15},
+]
+
+//OPERACIONES MATEMÁTICAS: + - * / % ^  
+
+let suma = num_a + num_b;// suma
+let resta = num_b - num_a;// resta
+let multi = num_a * num_b;// multiplicación
+let divi = num_b / num_a;// división
+let module = num_b % num_a;// Residuo división
+let expo = num_a ^ num_b; //Exponencial
+resta = Math.round(resta);
+console.log("Suma: "+ suma + "\nResta: "+ resta + "\nMultiplicación: "+ multi + "\nDivisión: " + divi + "\nModulo: " + module + "\nExponencial: " + expo);
+let concatenar = "Suma: ".concat(suma);
+console.log(concatenar);
+
+//OPERADORES DE COMPARACIÓN: </ >/ <>/ >=/ <=/ =/ ==/ ===
+
+// OPERADORES LÓGICOS: Ternario/ and &&/ or || / Negación, diferente, contrario !
+
+let varboo = true;
+console.log(!varboo);
+
+//ESTRUCTURAS REPETITIVAS: if/ else/ elseif 
+//ESTRUCTURAS CÍCLICAS: for / while/ do while
+
+let long = arraynum.length;
+if(long > 7){
+    console.log(arraynum);
+    console.log(arraynum.length);
+    console.log(users[0].name);
+
+}
+for(let i=0;i<dias_Semana.length;i++){
+    console.log(dias_Semana[i]);
+
+}
+let varname = 0;
+while(varname<users.length){
+    console.log(users[varname].name);
+    varname++;
+}
+
+//FUNCIONES Y EVENTOS
+function funcion(){
+    let variable = document.getElementById('variable').value;
+    variable = variable.toUpperCase();
+    document.getElementById("titulo").innerText = variable;
+    document.getElementById("titulo").style.color= "#00ffff";
+    console.log(variable);
+}
+document.getElementById("evento").addEventListener("click", function(){
+    let variable = document.getElementById('variable').value;
+    document.getElementById('variable').style.background="red";
+    console.log(variable);
+})
+
+
+</script>
+</body>
+</html>
